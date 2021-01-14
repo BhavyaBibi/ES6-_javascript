@@ -3,4 +3,4 @@ function sum(a,b){
 
 
 }
-export {sum}
+export {sum as add}
