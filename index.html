@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
    
     <title>ES6</title>
@@ -7,13 +7,30 @@
 <body>
     <script>
         
-           var ar=[10,20,30];
-           var[a,b,c]=ar;
-           console.log(a);  
-           console.log(b);
-           console.log(c);
+        class student{
+            constructor(){
+                console.log("constructor invoked");
 
+            }
+            setdata(nm,ag){
+                this.name = nm;
+                this.age = ag;
 
+        
+            }
+            getdata(){
+                return `name:${this.name} age:${this.age}`
+            }
+
+        }
+
+        var ob= new student();
+        ob.setdata("appus",5);
+        console.log(ob.getdata());
+
+        var ob1= new student();
+        ob1.setdata("ammus", 8);
+        console.log(ob1.getdata());
     </script>
 
     
