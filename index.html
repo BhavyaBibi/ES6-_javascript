@@ -5,32 +5,15 @@
     <title>ES6</title>
 </head>
 <body>
-    <script>
-        
-        class student{
-            constructor(){
-                console.log("constructor invoked");
+    <script type ="module">
 
-            }
-            setdata(nm,ag){
-                this.name = nm;
-                this.age = ag;
+        import {sum}  from './calc.js';
+        console.log(sum(10,20));
 
-        
-            }
-            getdata(){
-                return `name:${this.name} age:${this.age}`
-            }
-
-        }
-
-       class childclass extends student{
-
-       }
-       var obj = new  childclass;
-       obj.setdata("ammu",26);
-       console.log(obj.getdata());
     </script>
+        
+       
+    
 
     
 </body>
