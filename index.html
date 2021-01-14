@@ -2,13 +2,14 @@
 <html>
 <head>
    
-    <title>ES6</title>
+    <title>ES6 modules</title>
 </head>
 <body>
     <script type ="module">
 
-        import * as Calculations from './calc.js';
-        console.log(Calculations.div(10,20));
+     import calc from './calc.js'
+     var ob = new calc;
+     console.log(ob.add(10,20));
 
     </script>
         
