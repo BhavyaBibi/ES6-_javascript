@@ -10,4 +10,8 @@ function b()
 {
     console.log("inside function of b");
 }
-a(b);
+
+a (function(){
+    console.log("test condition");
+
+});
