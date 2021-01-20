@@ -16,12 +16,22 @@ const getPosts =() => {
 }
 
 
-const addpost=(post,callback) =>{
-    setTimeout(()=>{
-        posts.push(post);
-        callback();
-
-    },2000);
-
+const addPost = (post)  =>{
+    return new promise((resolve,reject)=>{
+        setTimeout(()=>{
+            posts.push(post);
+            let err= true;
+            if(err){
+                reject();
+            }
+            else{
+                resolve();
+            }
+    
+        },2000)
+    
+    })
+    
 }
-addpost({id:3, title:"Chapter2"},getPosts);
+addPost({id:3, title:"Chapter2"}).then(getPosts);
+
