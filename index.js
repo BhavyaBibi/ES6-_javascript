@@ -34,10 +34,19 @@ const addPost =(post)=>{
     })
     
 }
-addPost({id:3, title:"Chapter2"})
-.then(getPosts)
-.catch(()=>{
-    console.log("error occured")
+//addPost({id:3, title:"Chapter2"})
+//.then(getPosts)
+//.catch(()=>{
+  //  console.log("error occured")
+
+//})
+let p1= new Promise((resolve,reject)=>{
+    resolve("promise1")
+});
+let p2=10;
+let p3=Promise.resolve("another promise");
+Promise.all([p1,p2,p3 ]).then((res)=>{
+    console.log(res)
 
 })
 
