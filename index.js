@@ -16,11 +16,12 @@ const getPosts =() => {
 }
 
 
-const addPost = (post)  =>{
-    return new promise((resolve,reject)=>{
+const addPost =(post)=>{
+    return new Promise((resolve,reject)=>{
+
         setTimeout(()=>{
             posts.push(post);
-            let err= true;
+            let err = true;
             if(err){
                 reject();
             }
@@ -28,10 +29,15 @@ const addPost = (post)  =>{
                 resolve();
             }
     
-        },2000)
+        },2000);
     
     })
     
 }
-addPost({id:3, title:"Chapter2"}).then(getPosts);
+addPost({id:3, title:"Chapter2"})
+.then(getPosts)
+.catch(()=>{
+    console.log("error occured")
+
+})
 
