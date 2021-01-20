@@ -21,7 +21,7 @@ const addPost =(post)=>{
 
         setTimeout(()=>{
             posts.push(post);
-            let err = true;
+            let err = false;
             if(err){
                 reject();
             }
